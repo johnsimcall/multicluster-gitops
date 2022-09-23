@@ -12,6 +12,7 @@ spec:
   labelSelector:
     matchExpressions:
       - {key: node-role.kubernetes.io/worker, operator: Exists}
+      - {key: node.kubernetes.io/instance-type, operator: In, values: ['m5a.4xlarge']}
       - {key: submariner.io/gateway, operator: NotIn, values: ['true']}
   monPVCTemplate: 
     spec: 
